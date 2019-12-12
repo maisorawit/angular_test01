@@ -1,0 +1,44 @@
+<app-header></app-header>
+<!-- <div class="container">
+  <div class="d-flex flex-wrap p-2">
+    <div class="p-2" *ngFor="let user of users">
+      <div class="card">
+        <div class="card-header">
+          <img src="{{getPicture(user.gender, user.age)}}" width="150px" alt="">
+        </div>
+
+        <div class="card-body">
+          <p><b>Name : </b><span>{{ user.username }}</span></p>
+          <p><b>Age : </b><span>{{ user.age }}</span></p>
+          <button class="btn btn-sm btn-danger float-right" (click)="remove(user.id)">Remove</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="container">
+  <div class="row">
+    <div class="col-1">
+      <button  class="btn btn-warning" (click)="goToLogin()">Login</button>
+    </div>
+    <div class="col-1">
+      <button class="btn btn-warning" (click)="goToUserPage()">User</button>
+    </div>
+    <!-- <div class="col-1">
+      <button class="btn btn-primary" (click)="goToViewPage()">View</button>
+    </div> -->
+  </div>
+  <div class="row">
+    <div class="col-10">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-1">
+      <app-login></app-login>
+    </div>
+    <div class="col-1">
+      <app-login></app-login>
+    </div>
+  </div>
+</div>
+<!-- <app-user></app-user> -->
+<app-footer></app-footer>
